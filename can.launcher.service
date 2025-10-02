@@ -6,8 +6,8 @@ After=network.target network-online.target
 [Service]
 Type=simple
 User=%i
-WorkingDirectory=/home/%i/config
-ExecStart=/home/%i/config/launch.sh
+WorkingDirectory=/home/%i/raspi-can
+ExecStart=/home/%i/raspi-can/launch.sh
 Restart=always
 RestartSec=5
 
