@@ -1,0 +1,15 @@
+[Unit]
+Description=KOCETI CAN Launcher (%i)
+Requires=network.target network-onile.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/home/%i/config
+ExecStart=/home/%i/config/launch.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
