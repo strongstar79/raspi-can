@@ -1,7 +1,8 @@
 [Unit]
 Description=KOCETI CAN Launcher (%i)
-Requires=network.target network-onile.target
+#Requires=network.target network-online.target
 After=network.target network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
@@ -10,6 +11,8 @@ WorkingDirectory=/home/%i/raspi-can
 ExecStart=/home/%i/raspi-can/launch.sh
 Restart=always
 RestartSec=5
+Environment=HOME=/home/%i
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=network.target
+

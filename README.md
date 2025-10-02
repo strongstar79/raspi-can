@@ -6,3 +6,6 @@
     - 아래 내용을 파일 끝에 추가하고 저장.
     - %sudo ALL=(root) NOPASSWDL /usr/sbin/ip
     - %sudo ALL=(root) NOPASSWDL /usr/bin/ip
+5. can.launcher@.service 파일 복사 to /etc/systemd/system
+6. systemctl enalbe can.launcher@username.service
+7. systemctl start can.launcher@username.service

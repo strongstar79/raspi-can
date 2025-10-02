@@ -1,15 +1,5 @@
 # copy to /etc/udev/rules.d/
 
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/devices/platform/soc/*/spi0.0/net/can?", NAME="can0"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/devices/platform/soc/*/spi0.1/net/can?", NAME="can2"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/devices/platform/soc/*/spi1.0/net/can?", NAME="can1"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/devices/platform/soc/*/spi1.0/net/can?", NAME="can1"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/sys/devices/platform/soc/*/spi_master/spi0/spi0.0/net/can?", NAME="can0"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/sys/devices/platform/soc/*/spi_master/spi1/spi1.0/net/can?", NAME="can1"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/sys/devices/platform/soc/*/spi_master/spi0/spi0.1/net/can?", NAME="can2"
-#ACTION=="add", SUBSYSTEM=="net", DEVPATH=="/sys/devices/platform/soc/*/spi_master/spi1/spi1.1/net/can?", NAME="can3"
-#
-
 KERNELS=="spi0.0", SUBSYSTEMS=="spi", DRIVERS=="mcp251xfd", ACTION=="add", NAME="CAN0"
 KERNELS=="spi1.0", SUBSYSTEMS=="spi", DRIVERS=="mcp251xfd", ACTION=="add", NAME="CAN1"
 KERNELS=="spi1.1", SUBSYSTEMS=="spi", DRIVERS=="mcp251xfd", ACTION=="add", NAME="CAN2"
